@@ -1,0 +1,164 @@
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito';
+    
+}
+
+.bg {
+    clip-path: polygon(0 0, 100% 0, 100% 22%, 0 80%);
+    background: linear-gradient(180deg, #F99687 0%, #F07B7A 100%);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container{
+    margin: auto;
+    transform: translateY(140px);
+    text-align: center;
+    width: 300px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 60px rgba(143, 143, 143, 0.25);
+    padding: 30px;
+    box-sizing: border-box;
+
+    @include tablet {
+        width: 360px;
+    }
+
+    .top-text{
+        margin-bottom: 50px;
+        h2 {
+            color: #6F797E;
+            font-weight: 600;
+            margin-bottom: 0;
+            font-size: 27px;
+        }
+        p{
+            margin: 0;
+            color: #A7A7A7;
+        }
+    }
+
+
+    .login-forms {
+        margin: 30px auto;
+
+        .form-input {
+            width: 200px;
+            position: relative;
+            margin-bottom: 10px;
+            height: auto;
+            margin: 0 auto 10px;
+            @include tablet {
+                width: 300px;
+            }
+
+            .checklist {
+                position: absolute;
+                top: 12px;
+                right: 5px;
+                font-size: 25px;
+                color: #2CCB3C;
+                @include tablet {
+                    right: 15px;
+                }
+            }
+            input {
+                
+                border: 1px solid #D8D8D8;
+                width: 80%;
+                margin: 0 auto;
+                padding: 15px 20px;
+                display: block;
+                font-family: 'Nunito';
+                color: #676767;
+                font-weight: 700;
+                transition: .4s ease;
+                font-size: 14px;
+
+                &::placeholder{
+                    color: #A7A7A7;
+                    font-weight: 600;
+                }
+                &:focus {
+                    outline: none;
+                    border: 1px solid rgb(160, 160, 160);
+                }
+            }
+
+            .warning {
+                text-align: left;
+                margin-left: 10px;
+                color: #FD5C63;
+            }
+
+        }
+
+        
+    }
+    .cta {
+        width: 80%;
+        margin: 20px auto 30px;
+        @include tablet{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        a, button {
+            @include tablet {
+                display: block;
+            }
+        }
+        
+        a{
+            font-size: 15px;
+            color: #A7A7A7;
+            text-decoration: none;
+            
+        }
+        button {
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            background: #F17979;
+            font-family: 'Nunito';
+            margin: 20px auto;
+            font-size: 18px;
+            transition: .4s ease;
+            outline: 0;
+
+            @include tablet {
+                margin: 0;
+            }
+
+            &:hover {
+                cursor: pointer;
+                box-shadow: 0px 0px 10px rgba($color: #797979, $alpha: 0.3);
+            }
+            &:active {
+                background: rgb(255, 255, 255);
+                color: #FD5C63;
+            }
+        }
+    }
+} 
+

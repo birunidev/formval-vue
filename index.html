@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="root">
+        <div class="container">
+            <div class="top-text">
+                <h2>Welcome Back</h2>
+                <p>Sign in to your account</p>
+            </div>
+            <div class="login-forms">
+                <div class="form-input">
+                    <input v-model="email" v-on:keyup="validate" type="text" placeholder="Enter your email">
+                    <span v-if="checklist" class="iconify checklist" data-inline="false" data-icon="bx:bx-check"></span>
+                    <p class="warning">{{emailWarning}}</p>
+                </div>
+                <div class="form-input">
+                    <input v-model="password" v-on:keyup="validate" type="password" placeholder="Enter your password"
+                        v-on:keyup.enter="submit">
+                    <p class="warning">{{passWarning}}</p>
+                </div>
+            </div>
+            <div class="cta">
+                <a href="">forgot password?</a>
+                <button @click="submit">Sign in</button>
+            </div>
+        </div>
+    </div>
+    <div class="bg"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

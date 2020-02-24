@@ -1,0 +1,194 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito';
+}
+
+.bg {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 22%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 22%, 0 80%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#F99687), to(#F07B7A));
+  background: linear-gradient(180deg, #F99687 0%, #F07B7A 100%);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.container {
+  margin: auto;
+  -webkit-transform: translateY(140px);
+          transform: translateY(140px);
+  text-align: center;
+  width: 300px;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 60px rgba(143, 143, 143, 0.25);
+          box-shadow: 0px 0px 60px rgba(143, 143, 143, 0.25);
+  padding: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 360px;
+  }
+}
+
+.container .top-text {
+  margin-bottom: 50px;
+}
+
+.container .top-text h2 {
+  color: #6F797E;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 27px;
+}
+
+.container .top-text p {
+  margin: 0;
+  color: #A7A7A7;
+}
+
+.container .login-forms {
+  margin: 30px auto;
+}
+
+.container .login-forms .form-input {
+  width: 200px;
+  position: relative;
+  margin-bottom: 10px;
+  height: auto;
+  margin: 0 auto 10px;
+}
+
+@media (min-width: 768px) {
+  .container .login-forms .form-input {
+    width: 300px;
+  }
+}
+
+.container .login-forms .form-input .checklist {
+  position: absolute;
+  top: 12px;
+  right: 5px;
+  font-size: 25px;
+  color: #2CCB3C;
+}
+
+@media (min-width: 768px) {
+  .container .login-forms .form-input .checklist {
+    right: 15px;
+  }
+}
+
+.container .login-forms .form-input input {
+  border: 1px solid #D8D8D8;
+  width: 80%;
+  margin: 0 auto;
+  padding: 15px 20px;
+  display: block;
+  font-family: 'Nunito';
+  color: #676767;
+  font-weight: 700;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  font-size: 14px;
+}
+
+.container .login-forms .form-input input::-webkit-input-placeholder {
+  color: #A7A7A7;
+  font-weight: 600;
+}
+
+.container .login-forms .form-input input:-ms-input-placeholder {
+  color: #A7A7A7;
+  font-weight: 600;
+}
+
+.container .login-forms .form-input input::-ms-input-placeholder {
+  color: #A7A7A7;
+  font-weight: 600;
+}
+
+.container .login-forms .form-input input::placeholder {
+  color: #A7A7A7;
+  font-weight: 600;
+}
+
+.container .login-forms .form-input input:focus {
+  outline: none;
+  border: 1px solid #a0a0a0;
+}
+
+.container .login-forms .form-input .warning {
+  text-align: left;
+  margin-left: 10px;
+  color: #FD5C63;
+}
+
+.container .cta {
+  width: 80%;
+  margin: 20px auto 30px;
+}
+
+@media (min-width: 768px) {
+  .container .cta {
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .container .cta a, .container .cta button {
+    display: block;
+  }
+}
+
+.container .cta a {
+  font-size: 15px;
+  color: #A7A7A7;
+  text-decoration: none;
+}
+
+.container .cta button {
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  background: #F17979;
+  font-family: 'Nunito';
+  margin: 20px auto;
+  font-size: 18px;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .container .cta button {
+    margin: 0;
+  }
+}
+
+.container .cta button:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 10px rgba(121, 121, 121, 0.3);
+          box-shadow: 0px 0px 10px rgba(121, 121, 121, 0.3);
+}
+
+.container .cta button:active {
+  background: white;
+  color: #FD5C63;
+}
+/*# sourceMappingURL=style.css.map */
